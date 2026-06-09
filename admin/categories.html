@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías - Instaluvi Admin</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <h3>Instaluvi Admin</h3>
+            <ul>
+                <li><a href="dashboard.html">Panel</a></li>
+                <li><a href="users.html">Usuarios</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="categories.html" class="active">Categorías</a></li>
+                <li><a href="orders.html">Pedidos</a></li>
+                <li><a href="analytics.html">Análisis</a></li>
+                <li><a href="settings.html">Configuración</a></li>
+                <li><a href="../index.html">Volver al Sitio</a></li>
+            </ul>
+        </aside>
+        <main class="admin-content">
+            <div class="admin-header">
+                <h2>Gestión de Categorías</h2>
+                <button class="btn-add" onclick="addNewCategory()">+ Nueva Categoría</button>
+            </div>
+            
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Productos</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="categoriesList">
+                    <tr>
+                        <td>1</td>
+                        <td>Categoría Principal</td>
+                        <td>Descripción de categoría</td>
+                        <td>15</td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn-edit" onclick="editCategory(1)">Editar</button>
+                                <button class="btn-delete" onclick="deleteCategory(1)">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="../assets/js/app.js"></script>
+    <script src="../firebase/firestore.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis - Instaluvi Admin</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <h3>Instaluvi Admin</h3>
+            <ul>
+                <li><a href="dashboard.html">Panel</a></li>
+                <li><a href="users.html">Usuarios</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="categories.html">Categorías</a></li>
+                <li><a href="orders.html">Pedidos</a></li>
+                <li><a href="analytics.html" class="active">Análisis</a></li>
+                <li><a href="settings.html">Configuración</a></li>
+                <li><a href="../index.html">Volver al Sitio</a></li>
+            </ul>
+        </aside>
+        <main class="admin-content">
+            <div class="admin-header">
+                <h2>Análisis y Estadísticas</h2>
+            </div>
+            
+            <section class="analytics-section">
+                <h3>Tráfico del Sitio</h3>
+                <div id="trafficChart" style="height: 300px; background: #f0f0f0; border-radius: 8px; padding: 20px;">
+                    Gráfico de tráfico aquí
+                </div>
+            </section>
+            
+            <section class="analytics-section">
+                <h3>Conversiones</h3>
+                <p>Tasa de conversión: 3.2%</p>
+                <p>Valor promedio de compra: $145.50</p>
+            </section>
+        </main>
+    </div>
+    <script src="../assets/js/app.js"></script>
+    <script src="../firebase/analytics.js"></script>
+</body>
+</html>

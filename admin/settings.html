@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración - Instaluvi Admin</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <h3>Instaluvi Admin</h3>
+            <ul>
+                <li><a href="dashboard.html">Panel</a></li>
+                <li><a href="users.html">Usuarios</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="categories.html">Categorías</a></li>
+                <li><a href="orders.html">Pedidos</a></li>
+                <li><a href="analytics.html">Análisis</a></li>
+                <li><a href="settings.html" class="active">Configuración</a></li>
+                <li><a href="../index.html">Volver al Sitio</a></li>
+            </ul>
+        </aside>
+        <main class="admin-content">
+            <div class="admin-header">
+                <h2>Configuración del Sitio</h2>
+            </div>
+            
+            <form id="settingsForm" class="form-container">
+                <div class="form-group">
+                    <label for="siteName">Nombre del Sitio</label>
+                    <input type="text" id="siteName" value="Instaluvi" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="siteEmail">Email de Contacto</label>
+                    <input type="email" id="siteEmail" value="info@instaluvi.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="siteLogo">Logo</label>
+                    <input type="file" id="siteLogo" accept="image/*">
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Descripción del Sitio</label>
+                    <textarea id="description">Soluciones profesionales de instalación</textarea>
+                </div>
+                
+                <button type="submit" class="btn-add">Guardar Cambios</button>
+            </form>
+        </main>
+    </div>
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>

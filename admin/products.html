@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Instaluvi Admin</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <h3>Instaluvi Admin</h3>
+            <ul>
+                <li><a href="dashboard.html">Panel</a></li>
+                <li><a href="users.html">Usuarios</a></li>
+                <li><a href="products.html" class="active">Productos</a></li>
+                <li><a href="categories.html">Categorías</a></li>
+                <li><a href="orders.html">Pedidos</a></li>
+                <li><a href="analytics.html">Análisis</a></li>
+                <li><a href="settings.html">Configuración</a></li>
+                <li><a href="../index.html">Volver al Sitio</a></li>
+            </ul>
+        </aside>
+        <main class="admin-content">
+            <div class="admin-header">
+                <h2>Gestión de Productos</h2>
+                <button class="btn-add" onclick="addNewProduct()">+ Nuevo Producto</button>
+            </div>
+            
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="productsList">
+                    <tr>
+                        <td>1</td>
+                        <td>Producto Ejemplo</td>
+                        <td>Categoría 1</td>
+                        <td>$99.99</td>
+                        <td>50</td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn-edit" onclick="editProduct(1)">Editar</button>
+                                <button class="btn-delete" onclick="deleteProduct(1)">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="../assets/js/app.js"></script>
+    <script src="../firebase/firestore.js"></script>
+</body>
+</html>

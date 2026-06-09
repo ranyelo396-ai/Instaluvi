@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - Instaluvi Admin</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <h3>Instaluvi Admin</h3>
+            <ul>
+                <li><a href="dashboard.html">Panel</a></li>
+                <li><a href="users.html">Usuarios</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="categories.html">Categorías</a></li>
+                <li><a href="orders.html" class="active">Pedidos</a></li>
+                <li><a href="analytics.html">Análisis</a></li>
+                <li><a href="settings.html">Configuración</a></li>
+                <li><a href="../index.html">Volver al Sitio</a></li>
+            </ul>
+        </aside>
+        <main class="admin-content">
+            <div class="admin-header">
+                <h2>Gestión de Pedidos</h2>
+            </div>
+            
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID Pedido</th>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Total</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersList">
+                    <tr>
+                        <td>ORD-001</td>
+                        <td>Juan Pérez</td>
+                        <td>2026-06-09</td>
+                        <td>$299.99</td>
+                        <td><span class="badge-pending">Pendiente</span></td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn-edit" onclick="viewOrder('ORD-001')">Ver</button>
+                                <button class="btn-delete" onclick="cancelOrder('ORD-001')">Cancelar</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="../assets/js/app.js"></script>
+    <script src="../firebase/firestore.js"></script>
+</body>
+</html>

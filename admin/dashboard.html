@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel - Instaluvi Admin</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <h3>Instaluvi Admin</h3>
+            <ul>
+                <li><a href="dashboard.html" class="active">Panel</a></li>
+                <li><a href="users.html">Usuarios</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="categories.html">Categorías</a></li>
+                <li><a href="orders.html">Pedidos</a></li>
+                <li><a href="analytics.html">Análisis</a></li>
+                <li><a href="settings.html">Configuración</a></li>
+                <li><a href="../index.html">Volver al Sitio</a></li>
+            </ul>
+        </aside>
+        <main class="admin-content">
+            <div class="admin-header">
+                <h2>Panel de Administración</h2>
+                <button onclick="logout()">Cerrar Sesión</button>
+            </div>
+            
+            <section class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>Usuarios</h3>
+                    <p class="stat-number">150</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Productos</h3>
+                    <p class="stat-number">45</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pedidos</h3>
+                    <p class="stat-number">320</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Ingresos</h3>
+                    <p class="stat-number">$12,450</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../assets/js/app.js"></script>
+    <script src="../firebase/auth.js"></script>
+</body>
+</html>
