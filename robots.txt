@@ -1,0 +1,18 @@
+# Robots.txt para Instaluvi
+User-agent: *
+Allow: /
+
+# Permitir a los principales motores de busqueda
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Descargas de Google
+User-agent: Googlebot-Image
+Allow: /
+Allow: /assets/images/
+
+# Sitemap
+Sitemap: https://ranyelo396-ai.github.io/Instaluvi/sitemap.xml
